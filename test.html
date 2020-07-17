@@ -36,7 +36,7 @@
          
          <form name="submit-to-google-sheet" class="form-container">
              
-            <div id="form">
+            <div id="form2">
                 <img class="close" onclick="closeForm()" src="x.svg">
                 <br>
                   <h1 class="left" style="color: white;"> Get started with a technology coach today</h1>
@@ -201,6 +201,7 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
       const scriptURL = 'https://script.google.com/macros/s/AKfycbymmWOHsSHKOJNsZsxADEOKM1HJUYsaqkMAa00q8l1NW9GU-IM/exec'
     const form = document.forms['submit-to-google-sheet']
     const loading = document.querySelector('.js-loading')
@@ -210,6 +211,18 @@ function myFunction() {
     
     form.addEventListener('submit', e => {
       e.preventDefault()
+        console.log("hi")
+      showLoadingIndicator()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => showSuccessMessage(response))
+        .catch(error => showErrorMessage(error))
+    })
+    
+    const form2 = document.forms['submit-to-google-sheet']
+       
+    form2.addEventListener('submit', e => {
+      e.preventDefault()
+        console.log("hey")
       showLoadingIndicator()
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => showSuccessMessage(response))
