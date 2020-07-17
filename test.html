@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+         <script src="https://script.google.com/macros/s/AKfycbymmWOHsSHKOJNsZsxADEOKM1HJUYsaqkMAa00q8l1NW9GU-IM/exec"></script>
+        <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <style>
+        </style>
+    </head>
+    <body>
+
+<div id="navbar">
+    <img class="logo" src="Logo.svg">
+    <b onclick="openForm()">Connect</b>
+  <a href="about.html">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">How it Works 
+      <i class="arrow" style="padding:5px;margin:4px;"></i>
+    </button>
+    <div class="dropdown-content">
+         <a href="teachers.html">For Teachers</a>
+      <a href="learner.html">For Learners</a>
+    </div>
+  </div> 
+<a class="active" href="index.html">Home</a>
+</div>
+        
+     <div class="form-popup" id="myForm">
+                   
+         
+         <form name="submit-to-google-sheet" class="form-container">
+             
+            <div id="form">
+                <img class="close" onclick="closeForm()" src="x.svg">
+                <br>
+                  <h1 class="left" style="color: white;"> Get started with a technology coach today</h1>
+            <p class="left" style="color: white;"> Tell us about yourself, what devices you own, and what you're looking to learn about. We will reach out and get you connected!</p>
+                <div class="halfColumn" style="padding-right: 5px;">
+                <input type="text" id="fname" name="firstname" placeholder="First Name" required>  
+                    <input type="text" id="phone" name="phonenumber" placeholder="&#40; &#95; &#95; &#95; &#41;  &#95; &#95; &#95;  &#45;  &#95; &#95; &#95; &#95;">
+                    </div>
+                <div class="halfColumn" style="padding-left: 5px;">
+                                <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                </div>
+                   
+
+         <textarea id="info" name="info" placeholder="Tell us about your devices and what you would like to learn..." required></textarea> 
+                      <input type="submit" style="width: 25%; float: right; margin-top: 20px;" value="Submit"> 
+                                </div>
+       
+</form> 
+             <div class="loading js-loading is-hidden">
+      <div class="loading-spinner">
+        <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+      </div>
+    </div>
+
+    <p class="js-success-message is-hidden" onclick="closeForm()">Success!</p>
+    <p class="js-error-message is-hidden" onclick="closeForm()">Error!</p>
+    </div>
+
+
+<div class="row">
+  <div class="halfColumn" style="padding-top: 60px; padding-right: 40px;">
+    <h1>Personalized technology education brought to you.</h1>
+    <p>Klari Learning is a service that provides customized sessions for understanding your everyday tech devices. We connect you to trained coaches via Zoom for regular sessions and offer follow up reference resources after each meeting. Klari Learning's focus is collaboration, memory retention, and empowerment. </p>
+  </div>
+  <div class="halfColumn">
+      <img src="imgHome.svg" style="float: right;">
+</div>
+</div>
+    <div class="row" style=" background:#E7F7FC;text-align: center; margin: 0;">
+        <h1 style="padding-top: 70px;">How It Works </h1>
+        <p style="width:40%; margin: auto;"> Klari Learning fits to your schedule and offers sessions at a pace that is best for you. </p>
+        <div class="row">
+        <div class="thirdColumn">
+            <img src="getConnected.svg">
+            <h2> Get Started</h2>
+            <p2>Submit your information and let us know what you are interested in learning about. Klari Learning will connect you to a coach. </p2>
+        </div>
+                    <div class="thirdColumn">
+            <img src="Learn.svg">
+            <h2> Learn </h2>
+            <p2> You and your coach will collaborate using Zoom to answer your tech use questions.</p2>
+        </div>
+                    <div class="thirdColumn">
+            <img src="dailyUse.svg">
+            <h2> Daily Use</h2>
+            <p2>Klari Learning keeps track of your progress and provides you with follow-up resources to reference as you implement your learning into your daily tech use.</p2>
+        </div>
+        </div>
+    </div>
+        <div class="row" style="background: white; margin-top: 80px;">
+            <div class="halfColumn" style="width: 40%;">
+               <img src="testprof.png" style="max-width: 75%;">
+            
+            </div>
+            <div class="halfColumn" style="width: 60%;">
+                <h3> &ldquo;We have been frustrated and felt inept by past computer trainings which were too fast paced, dense, and overwhelming for us. Our experience with Klari has been much more helpful and personalized. <br><br>
+
+We identify skills that we want and need to learn, such as sending email attachments or organizing our file. In each session we address 2 or 3 tasks and are able to work at a pace comfortable to us and practice the skill with someone there to prompt us. After, we get an outline of what we've learned to refer to if we need to review. <br><br>
+
+Our coach is patient and goes at a pace we can handle. We are left feeling excited and empowered as a result of each session. We have found that we can now really use the new skills we have worked on.	&rdquo;
+                
+                </h3>
+                <p2 style="float: right;"> Barbara and Alan, age 74 and 79</p2>
+            
+            </div>
+        
+    </div>
+        <div class="row" style="background: #532689; margin: 0; ">
+            <div class="halfColumn" style="padding: 60px 80px 20px 80px">
+            <h1 style="color: white; "> Get started with a technology coach today</h1>
+            <p style="color: white;"> Tell us about yourself, what devices you own, and what you're looking to learn about. We will reach out and get you connected!</p>
+            </div>
+            </div>
+        
+     <div class="row" style="background: #532689; margin: 0; padding: 0px 80px 60px 80px;">
+         <form name="submit-to-google-sheet">
+            <div class="halfColumn" style="padding-right: 20px;">
+                
+                <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+                <input type="text" id="phone" name="phonenumber" placeholder="&#40; &#95; &#95; &#95; &#41;  &#95; &#95; &#95;  &#45;  &#95; &#95; &#95; &#95;">
+                            
+                </div>
+
+                <div class="halfColumn" style="padding-left: 0px;">
+                
+                <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
+                <input type="text" id="email" name="email" placeholder="Email" required>
+                   
+                </div>
+         <textarea id="info" name="info" placeholder="Tell us about your devices and what you would like to learn..." required></textarea> 
+             <input type="submit" style="width: 25%; float: right; margin-top: 20px;" value="Submit"> 
+</form> 
+             <div class="loading js-loading is-hidden">
+      <div class="loading-spinner">
+        <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg>
+      </div>
+    </div>
+
+    <p class="js-success-message is-hidden">Success!</p>
+    <p class="js-error-message is-hidden">Error!</p>
+    </div>
+    
+        <div class="footer">
+            <div class="thirdColumn">
+                <img src="Logo.svg" width="50%"><br>
+            <p2>Klari Learning&#39;s mission is to offer personalized and accessible tech learning. </p2>
+        
+        </div>
+            <div class="halfColumn" style="float: right;">
+            <div class="thirdColumn" >
+            <h3>More Info</h3>
+            <p3>FAQ</p3><br>
+            <p3>About Us</p3><br>
+            <p3>How It Works</p3>
+            </div>
+            <div class="thirdColumn" style="padding-right: 0;">
+                <h3>Social Media</h3>
+                <img class="icon" src="LI-In-Bug%201.svg" shape-rendering="crispEdges;">
+                <img class="icon"  src="f_logo_RGB-Blue_144%201.svg" shape-rendering="crispEdges;">
+                <img class="icon"  src="IG_Glyph_Fill%201.svg" shape-rendering="crispEdges;">
+                
+            </div>
+            </div>
+            </div>
+    
+
+<script>
+
+function openForm() {
+    $("#myForm").fadeIn();
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    $("myForm").fadeOut();
+  document.getElementById("myForm").style.display = "none";
+}  
+
+
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbymmWOHsSHKOJNsZsxADEOKM1HJUYsaqkMAa00q8l1NW9GU-IM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const loading = document.querySelector('.js-loading')
+    const successMessage = document.querySelector('.js-success-message')
+    const errorMessage = document.querySelector('.js-error-message')
+
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      showLoadingIndicator()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => showSuccessMessage(response))
+        .catch(error => showErrorMessage(error))
+    })
+
+    function showLoadingIndicator () {
+      form.classList.add('is-hidden')
+      loading.classList.remove('is-hidden')
+    }
+
+    function showSuccessMessage (response) {
+      console.log('Success!', response)
+      setTimeout(() => {
+        successMessage.classList.remove('is-hidden')
+        loading.classList.add('is-hidden')
+      }, 500)
+    }
+
+    function showErrorMessage (error) {
+      console.error('Error!', error.message)
+      setTimeout(() => {
+        errorMessage.classList.remove('is-hidden')
+        loading.classList.add('is-hidden')
+      }, 500)
+    }
+</script>
+
+    </body>
+</html>
